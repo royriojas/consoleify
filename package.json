@@ -1,6 +1,6 @@
 {
   "name": "consoleify",
-  "version": "0.0.9",
+  "version": "1.0.0",
   "description": "browserify transform to inject a custom console object that prefix the calls to it with the name of the module itself",
   "main": "index.js",
   "scripts": {
