@@ -29,15 +29,15 @@ describe( 'stricterify', function () {
     var content = '/** NO_OVERRIDE_CONSOLE **/\nvar fn = function () { console.log("hi"); };\nmodule.exports = fn;';
 
     transformTools.runTransform( transform.configure(), dummyJsFile, {
-        content: content
-      }, function ( err, transformed ) {
+      content: content
+    }, function ( err, transformed ) {
 
-        if ( !err ) {
-          expect( transformed ).to.be.equal( '/** NO_OVERRIDE_CONSOLE **/\nvar fn = function () { console.log("hi"); };\nmodule.exports = fn;' );
-          done();
-        }
-        throw err;
+      if ( !err ) {
+        expect( transformed ).to.be.equal( '/** NO_OVERRIDE_CONSOLE **/\nvar fn = function () { console.log("hi"); };\nmodule.exports = fn;' );
+        done();
       }
+      throw err;
+    }
     );
   } );
 

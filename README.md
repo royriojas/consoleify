@@ -1,15 +1,16 @@
-[![NPM Version](http://img.shields.io/npm/v/stricterify.svg?style=flat)](https://npmjs.org/package/stricterify)
-[![Build Status](http://img.shields.io/travis/royriojas/stricterify.svg?style=flat)](https://travis-ci.org/royriojas/stricterify)
+[![NPM Version](http://img.shields.io/npm/v/consoleify.svg?style=flat)](https://npmjs.org/package/consoleify)
+[![Build Status](http://img.shields.io/travis/royriojas/consoleify.svg?style=flat)](https://travis-ci.org/royriojas/consoleify)
 
-# stricterify
-> Browserify transform to add 'use strict' on the modules that don't have it at the first place. Use with care. Better if not global
-
+# consoleify
+> browserify transform to inject a custom console object that prefix the calls to it with the name of the module itself 
 
 ## Overview
 This transform will turn this: 
 
 ```javascript
+//my-module.js
 var someFunc = function () {
+  console.log('hello');
 };
 module.exports = someFunc;
 ```
@@ -17,28 +18,31 @@ module.exports = someFunc;
 Into this:
 
 ```javascript
-'use strict';
+/*wrapping console start!*/
+var console = require('consoleify/console-wrapper').create("dummy2");
+/*wrapping console end!*/
+
 var someFunc = function () {
 };
 module.exports = someFunc;
 ```
+So console methods calls are prefixed by the module where the call was done, for easy tracking/filtering of logs 
 
-So your code works well once it runs in the browser.
+the `consoleify/console-wrapper` module is also part of this module
 
 ## Install
 
 ```bash
-npm i --save-dev stricterify
+npm i --save-dev consoleify
 ```
 
 ## Usage
 
 ```
-var stricterify = require( 'stricterify' ).configure( deps );
+var consoleify = require( 'consoleify' );
 
 var b = browserify();
 b.add('./my-module');
-b.transform( stricterify );
-
+b.transform( consoleify );
 b.bundle().pipe(process.stdout);
 ```
