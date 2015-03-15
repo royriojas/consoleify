@@ -1,4 +1,4 @@
-describe( 'stricterify', function () {
+describe( 'consoleify', function () {
   var transformTools = require( 'browserify-transform-tools' );
   var transform = require( '../' );
   var path = require( 'path' );
