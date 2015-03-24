@@ -46,3 +46,11 @@ b.add('./my-module');
 b.transform( consoleify );
 b.bundle().pipe(process.stdout);
 ```
+
+## License
+
+MIT
+
+## Changelog
+
+[Changelog](./changelog.md)
