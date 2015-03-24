@@ -13,6 +13,7 @@
     "lint": "npm run beautify && npm run eslint",
     "check": "npm run beautify-check && npm run eslint && npm test",
     "install-hooks": "changelogx install-hook && prepush install",
+    "changelog": "changelogx -f markdown -o ./changelog.md",
     "bump": "bumpery --verify='npm run check'"
   },
   "repository": {
