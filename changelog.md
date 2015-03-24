@@ -1,5 +1,17 @@
 
 # consoleify - Changelog
+## v1.0.3
+- **Build Scripts Changes**
+  - Release v1.0.3 - [4431aeb]( https://github.com/royriojas/consoleify/commit/4431aeb ), [Roy Riojas](https://github.com/Roy Riojas), 24/03/2015 16:40:58
+    
+#### bumpery
+- **Build Scripts Changes**
+  - remove bumpery from dependencies - [f8f3d1b]( https://github.com/royriojas/consoleify/commit/f8f3d1b ), [Roy Riojas](https://github.com/Roy Riojas), 24/03/2015 16:40:02
+    
+#### Changelog
+- **Documentation**
+  - generated changelog - [92ba0f0]( https://github.com/royriojas/consoleify/commit/92ba0f0 ), [Roy Riojas](https://github.com/Roy Riojas), 24/03/2015 16:37:45
+    
 ## v1.0.2
 - **Build Scripts Changes**
   - Release v1.0.2 - [d39f714]( https://github.com/royriojas/consoleify/commit/d39f714 ), [Roy Riojas](https://github.com/Roy Riojas), 24/03/2015 16:36:32
