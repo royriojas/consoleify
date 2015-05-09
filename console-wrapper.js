@@ -2,7 +2,7 @@
 /**
  * Super simple module to remove logs/debugs from the app
  */
-var oldConsole = require('console') || {};
+var oldConsole = require( 'console' ) || {};
 
 var consoleKeys = [
   'log',
@@ -23,10 +23,17 @@ var consoleKeys = [
 
 var consoleWrapper = {
   create: function ( moduleName ) {
+    if ( !Function.prototype.bind ) {
+      return oldConsole;
+    }
     var consoleObj = {};
     consoleKeys.forEach( function ( method ) {
       var methodFound = oldConsole[ method ];
-      if (!methodFound) {
+      if ( !methodFound ) {
+        return;
+      }
+      // IE10 console.profile is an object not a function.
+      if ( !methodFound.bind ) {
         return;
       }
       consoleObj[ method ] = moduleName ? methodFound.bind( oldConsole, moduleName + ':' ) : methodFound.bind( oldConsole );

@@ -4,8 +4,8 @@
   "description": "browserify transform to inject a custom console object that prefix the calls to it with the name of the module itself",
   "main": "index.js",
   "scripts": {
-    "beautify": "esbeautifier index.js 'src/**/*.js' 'specs/**/*.js'",
-    "beautify-check": "esbeautifier -k index.js 'src/**/*.js' 'specs/**/*.js'",
+    "beautify": "esbeautifier index.js console.js console-wrapper.js 'specs/**/*.js'",
+    "beautify-check": "esbeautifier -k index.js console.js console-wrapper.js 'specs/**/*.js'",
     "eslint": "eslinter index.js 'src/**/*.js' 'specs/**/*.js'",
     "test": "mocha-runner 'specs/**/*.js'",
     "cover": "istanbul cover -x 'specs/**/*.js' mocha-runner 'specs/**/*.js' html text-summary",
