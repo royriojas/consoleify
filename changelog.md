@@ -1,5 +1,24 @@
 
 # consoleify - Changelog
+## v1.0.5
+- **Build Scripts Changes**
+  - Release v1.0.5 - [2658309]( https://github.com/royriojas/consoleify/commit/2658309 ), [royriojas](https://github.com/royriojas), 16/05/2015 10:22:32
+    
+- **Bug Fixes**
+  - prevent leak of the full path to the `console-wrapper` module. Fixes [#2](https://github.com/royriojas/consoleify/issues/2) - [957371c]( https://github.com/royriojas/consoleify/commit/957371c ), [royriojas](https://github.com/royriojas), 16/05/2015 10:22:24
+    
+## v1.0.4
+- **Build Scripts Changes**
+  - Release v1.0.4 - [6905e64]( https://github.com/royriojas/consoleify/commit/6905e64 ), [royriojas](https://github.com/royriojas), 08/05/2015 17:37:56
+    
+#### console-wrapper
+- **Bug Fixes**
+  - fix failure on ie9. Fixes [#1](https://github.com/royriojas/consoleify/issues/1) - [4257265]( https://github.com/royriojas/consoleify/commit/4257265 ), [royriojas](https://github.com/royriojas), 08/05/2015 17:37:21
+    
+#### Changelog
+- **Documentation**
+  - generated changelog - [73d70a9]( https://github.com/royriojas/consoleify/commit/73d70a9 ), [Roy Riojas](https://github.com/Roy Riojas), 24/03/2015 16:41:32
+    
 ## v1.0.3
 - **Build Scripts Changes**
   - Release v1.0.3 - [4431aeb]( https://github.com/royriojas/consoleify/commit/4431aeb ), [Roy Riojas](https://github.com/Roy Riojas), 24/03/2015 16:40:58
