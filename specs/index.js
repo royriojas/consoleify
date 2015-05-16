@@ -53,8 +53,7 @@ describe( 'consoleify', function () {
     }, function ( err, transformed ) {
 
       if ( !err ) {
-        expect( transformed ).to.be.equal( '\n/*wrapping console start!*/\n var console = require(\'' + path.resolve( __dirname, '../console-wrapper' ) +
-            '\').create("dummy2");\n/*wrapping console end!*/\n\n"use strict";\nvar fn = function () { console.log("hello world"); };\nmodule.exports = fn;' );
+        expect( transformed ).to.be.equal( '\n/*wrapping console start!*/\n var console = require(\'../../console-wrapper\').create("dummy2");\n/*wrapping console end!*/\n\n"use strict";\nvar fn = function () { console.log("hello world"); };\nmodule.exports = fn;' );
         done();
       }
       throw err;

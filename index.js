@@ -14,7 +14,8 @@ module.exports = transformTools.makeStringTransform( 'consoleify', options, func
 
   var usesConsole = content.indexOf( 'console' ) > -1;
   if ( usesConsole && content.indexOf( '/** NO_OVERRIDE_CONSOLE **/' ) === -1 ) {
-    content = sFormat( customConsole, path.basename( file ).replace( /\.js(x)*$/, '' ), path.resolve( __dirname, './console-wrapper' ) ) + content;
+    var pathToFile = path.relative( path.dirname( file ), path.resolve( __dirname, './console-wrapper' ) );
+    content = sFormat( customConsole, path.basename( file ).replace( /\.js(x)*$/, '' ), pathToFile ) + content;
   }
 
   done( null, content );
