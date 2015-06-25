@@ -24,7 +24,9 @@ describe( 'console-wrapper', function () {
       var mockConsole = me.sandbox.createSpyObj( 'console', consoleKeys );
 
       var consoleWrapper = proxyquire( '../console-wrapper', {
-        console: mockConsole
+        './window': {
+          console: mockConsole
+        }
       } );
 
       var clog = consoleWrapper.create( 'dummyModule' );

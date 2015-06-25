@@ -18,8 +18,7 @@ describe( 'consoleify', function () {
         done();
       }
       throw err;
-    }
-    );
+    } );
   } );
 
   it( 'should skip injecting if the module has the comment no inject console', function ( done ) {
@@ -37,8 +36,7 @@ describe( 'consoleify', function () {
         done();
       }
       throw err;
-    }
-    );
+    } );
   } );
 
 
@@ -51,13 +49,11 @@ describe( 'consoleify', function () {
     transformTools.runTransform( transform.configure(), dummyJsFile, {
       content: content
     }, function ( err, transformed ) {
-
       if ( !err ) {
         expect( transformed ).to.be.equal( '\n/*wrapping console start!*/\n var console = require(\'../../console-wrapper\').create("dummy2");\n/*wrapping console end!*/\n\n"use strict";\nvar fn = function () { console.log("hello world"); };\nmodule.exports = fn;' );
         done();
       }
       throw err;
-    }
-    );
+    } );
   } );
 } );
