@@ -1,5 +1,10 @@
 
 # consoleify - Changelog
+## v1.1.1
+- **Build Scripts Changes**
+  - Update browserify-transform-tools and removed old unused code - [4f23d23]( https://github.com/royriojas/consoleify/commit/4f23d23 ), [royriojas](https://github.com/royriojas), 17/07/2015 18:23:06
+
+    
 ## v1.1.0
 - **Bug Fixes**
   - make console-wrapper to work in IE browsers - [9b55e63]( https://github.com/royriojas/consoleify/commit/9b55e63 ), [royriojas](https://github.com/royriojas), 25/06/2015 16:19:48
