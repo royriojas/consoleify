@@ -5,6 +5,11 @@ var path = require( 'path' );
 var options = {
   excludeExtensions: [
     '.json'
+  ],
+  includeExtensions: [
+    '.js',
+    '.jsx',
+    '.es6'
   ]
 };
 var customConsole = '\n/*wrapping console start!*/\n var console = require(\'{1}\').create("{0}");\n/*wrapping console end!*/\n\n';

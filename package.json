@@ -6,13 +6,14 @@
   "scripts": {
     "beautify": "esbeautifier index.js console.js console-wrapper.js 'specs/**/*.js'",
     "beautify-check": "esbeautifier -k index.js console.js console-wrapper.js 'specs/**/*.js'",
-    "eslint": "eslinter index.js 'src/**/*.js' 'specs/**/*.js'",
+    "eslint": "eslinter index.js 'specs/**/*.js'",
     "test": "mocha-runner 'specs/**/*.js'",
     "cover": "istanbul cover -x 'specs/**/*.js' mocha-runner 'specs/**/*.js' html text-summary",
     "watch": "npm run cover && watch-spawn -p 'specs/**/*.js' -p 'index.js' npm run cover",
     "lint": "npm run beautify && npm run eslint",
     "check": "npm run beautify-check && npm run eslint && npm test",
     "install-hooks": "changelogx install-hook && prepush install",
+    "do-changelog": "npm run changelog && git add ./changelog.md && git commit -m 'DOC: Generate changelog'",
     "changelog": "changelogx -f markdown -o ./changelog.md",
     "bump": "bumpery --verify='npm run check'"
   },
@@ -26,17 +27,17 @@
     "npm run check"
   ],
   "devDependencies": {
-    "bumpery": "^1.0.7",
-    "changelogx": "^1.0.13",
-    "eslinter": "^2.0.1",
-    "istanbul": "^0.3.16",
+    "bumpery": "^1.1.1",
+    "changelogx": "^1.0.15",
+    "eslinter": "^2.0.5",
+    "istanbul": "^0.3.17",
     "mocha-runner": "^1.0.8",
     "prepush": "^2.0.4",
-    "proxyquire": "^1.5.0",
+    "proxyquire": "^1.6.0",
     "watch-spawn": "^1.0.3"
   },
   "dependencies": {
-    "browserify-transform-tools": "^1.3.3",
+    "browserify-transform-tools": "^1.4.2",
     "stringformat": "0.0.5"
   },
   "bugs": {
