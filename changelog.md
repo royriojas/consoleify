@@ -1,5 +1,10 @@
 
 # consoleify - Changelog
+## v1.1.2
+- **Refactoring**
+  - favor includeExtensions over exclude extensions - [19c3391]( https://github.com/royriojas/consoleify/commit/19c3391 ), [royriojas](https://github.com/royriojas), 19/07/2015 07:45:28
+
+    
 ## v1.1.1
 - **Build Scripts Changes**
   - Update browserify-transform-tools and removed old unused code - [4f23d23]( https://github.com/royriojas/consoleify/commit/4f23d23 ), [royriojas](https://github.com/royriojas), 17/07/2015 18:23:06
