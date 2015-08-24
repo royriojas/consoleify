@@ -1,5 +1,10 @@
 
 # consoleify - Changelog
+## v1.1.3
+- **Bug Fixes**
+  - not properly shiming console object - [814ebdf]( https://github.com/royriojas/consoleify/commit/814ebdf ), [Roy Riojas](https://github.com/Roy Riojas), 24/08/2015 02:30:32
+
+    
 ## v1.1.2
 - **Refactoring**
   - favor includeExtensions over exclude extensions - [19c3391]( https://github.com/royriojas/consoleify/commit/19c3391 ), [royriojas](https://github.com/royriojas), 19/07/2015 07:45:28
