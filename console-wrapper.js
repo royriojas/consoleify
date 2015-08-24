@@ -4,7 +4,7 @@
  */
 
 // make sure a console object exists
-require( './shim' );
+require( './shim' ).init();
 
 //var win.console = require( './console' ) || {};
 var win = require( './window' );
@@ -33,7 +33,7 @@ var consoleWrapper = {
     if ( !Function.prototype.bind ) {
       return win.console;
     }
-    var consoleObj = {};
+    var consoleObj = { };
     consoleKeys.forEach( function ( method ) {
       var methodFound = win.console[ method ];
       if ( !methodFound ) {
@@ -43,9 +43,7 @@ var consoleWrapper = {
         consoleObj[ method ] = moduleName ? methodFound.bind( win.console, moduleName + ':' ) : methodFound.bind( win.console );
       } else {
         consoleObj[ method ] = function () {
-          var args = [
-            moduleName
-          ].concat( arguments );
+          var args = [ moduleName ].concat( arguments );
 
           try {
             originalApply.apply( methodFound, [

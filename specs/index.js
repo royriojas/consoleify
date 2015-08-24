@@ -16,6 +16,7 @@ describe( 'consoleify', function () {
       if ( !err ) {
         expect( transformed ).to.be.equal( 'var fn = function () {};\nmodule.exports = fn;' );
         done();
+        return;
       }
       throw err;
     } );
@@ -34,6 +35,7 @@ describe( 'consoleify', function () {
       if ( !err ) {
         expect( transformed ).to.be.equal( '/** NO_OVERRIDE_CONSOLE **/\nvar fn = function () { console.log("hi"); };\nmodule.exports = fn;' );
         done();
+        return;
       }
       throw err;
     } );
@@ -52,6 +54,7 @@ describe( 'consoleify', function () {
       if ( !err ) {
         expect( transformed ).to.be.equal( '\n/*wrapping console start!*/\n var console = require(\'../../console-wrapper\').create("dummy2");\n/*wrapping console end!*/\n\n"use strict";\nvar fn = function () { console.log("hello world"); };\nmodule.exports = fn;' );
         done();
+        return;
       }
       throw err;
     } );
